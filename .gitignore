@@ -1,0 +1,34 @@
+node_modules
+dist
+.DS_Store
+*.local
+.env
+.env.local
+.env.*.local
+
+# Android build artifacts
+android/.gradle
+android/build
+android/app/build
+android/local.properties
+*.apk
+*.ipa
+
+# Xcode — NOTE: ios/App/Pods and ios/App/App/public ARE committed so
+# Xcode Cloud can build App.xcworkspace with no Node/CocoaPods step.
+ios/App/build
+ios/App/DerivedData
+**/xcuserdata/
+*.xcuserstate
+
+# Local archive output + placeholder backups (not for the repo)
+/build
+*.placeholder.bak
+**/.placeholder-bak/
+
+# Stray duplicate iOS project (leftover, has its own nested .git)
+ios/App/Cadence/
+ios/App/Cadence.xcodeproj/
+
+# Local Claude Code helpers
+.claude/

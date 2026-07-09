@@ -1,0 +1,14 @@
+{
+	"appId": "com.unio.cadence",
+	"appName": "Cadence",
+	"webDir": "dist",
+	"backgroundColor": "#000000",
+	"android": {
+		"backgroundColor": "#000000"
+	},
+	"packageClassList": [
+		"CAPBrowserPlugin",
+		"FilesystemPlugin",
+		"PreferencesPlugin"
+	]
+}

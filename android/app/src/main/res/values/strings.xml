@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Cadence</string>
+    <string name="title_activity_main">Cadence</string>
+    <string name="package_name">com.unio.cadence</string>
+    <string name="custom_url_scheme">com.unio.cadence</string>
+    <string name="widget_label">Cadence Quick Note</string>
+    <string name="widget_desc">Jot a quick note straight into Cadence</string>
+</resources>

@@ -1,0 +1,7 @@
+# Only ignore build output + user state. Pods, App/public, generated
+# capacitor configs, and the Cordova plugins bridge ARE committed so
+# Xcode Cloud can build App.xcworkspace with no Node/CocoaPods step.
+App/build
+App/output
+DerivedData
+xcuserdata

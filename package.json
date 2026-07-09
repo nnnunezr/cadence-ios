@@ -1,0 +1,42 @@
+{
+  "name": "cadence",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "mobile:sync": "vite build && cap sync",
+    "mobile:android": "cap open android",
+    "mobile:ios": "cap open ios",
+    "mobile:apk": "npm run mobile:sync && cd android && ./gradlew assembleDebug",
+    "shots": "node screenshots/run.mjs",
+    "shots:frame": "node screenshots/base.mjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.1",
+    "@capacitor/browser": "^6.0.6",
+    "@capacitor/cli": "^6.2.1",
+    "@capacitor/core": "^6.2.1",
+    "@capacitor/filesystem": "^6.0.4",
+    "@capacitor/ios": "^6.2.1",
+    "@capacitor/preferences": "^6.0.4",
+    "dexie": "^4.4.4",
+    "dexie-react-hooks": "^4.4.0",
+    "html2pdf.js": "^0.10.3",
+    "lucide-react": "^1.17.0",
+    "react": "^19.0.0",
+    "react-colorful": "^5.7.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "playwright": "^1.61.1",
+    "typescript": "~5.9.2",
+    "vite": "^8.0.0"
+  }
+}
