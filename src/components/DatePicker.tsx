@@ -1,7 +1,7 @@
 // ── Cadence date picker (themed; past days disabled) ─────────────────────────
 import { useState } from 'react';
 import { Calendar, ChevronLeft, ChevronRight, X } from 'lucide-react';
-import { todayStr } from './data';
+import { todayStr } from '../data';
 
 const DOWS = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 const iso = (y: number, m: number, d: number) =>

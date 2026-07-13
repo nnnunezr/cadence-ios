@@ -26,7 +26,8 @@ ios/App/DerivedData
 *.placeholder.bak
 **/.placeholder-bak/
 
-# Stray duplicate iOS project (leftover, has its own nested .git)
+# Guard: stray duplicate iOS projects (removed 2026-07 — keep ignored so an
+# accidental Xcode "New Project" here never lands in the repo)
 ios/App/Cadence/
 ios/App/Cadence.xcodeproj/
 
