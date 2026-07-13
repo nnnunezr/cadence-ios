@@ -1,7 +1,7 @@
 // ── Quick email login (local-only gate; no password, no network) ─────────────
 import { useState } from 'react';
 import type { FormEvent } from 'react';
-import { signIn, isValidEmail } from './data';
+import { signIn, isValidEmail } from '../data';
 import { CadenceMark } from './CadenceMark';
 
 export function Login({ onAuthed }: { onAuthed: (email: string) => void }) {

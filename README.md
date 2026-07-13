@@ -4,7 +4,29 @@ A small companion to the Unio Dashboard. Keep your daily rhythm: **tasks · goal
 
 ## Stack
 
-React 19 · TypeScript · Vite · Dexie (IndexedDB) · lucide-react
+React 19 · TypeScript · Vite · Dexie (IndexedDB) · lucide-react · Capacitor 6 (iOS + Android shells)
+
+## Layout
+
+```
+src/
+  main.tsx            entry — applies persisted theme/accent before first paint
+  App.tsx             app shell: login gate, tab nav, dashboard wiring
+  data.ts             Dexie schema + all data operations (single data layer)
+  index.css           all styles (design tokens + components)
+  components/         shared UI: dialogs/toast (ui.tsx), DatePicker, Login,
+                      CadenceMark, Confetti, BrandLogo
+  features/           one file per tab: Tasks, Notes, Goals, Streak, Profile,
+                      Settings
+  lib/                helpers: format.ts (dates, colors, files), pdf.ts (export)
+ios/App/              Capacitor iOS shell — App.xcworkspace is what you build.
+                      Pods/ and App/public/ are committed so Xcode Cloud can
+                      build with no Node/CocoaPods step (see IOS-BUILD.md)
+android/              Capacitor Android shell (web assets copied at build time)
+screenshots/          App Store screenshot pipeline (Playwright) + final sets
+showcase/             marketing/App Store imagery
+scripts/              icon generation
+```
 
 ## Run
 
@@ -20,7 +42,21 @@ npm run build   # static output in dist/
 npm run preview
 ```
 
-## Deploy
+## Mobile
+
+```sh
+npm run mobile:sync     # vite build + cap sync (updates ios/ and android/)
+npm run mobile:ios      # opens ios/App/App.xcworkspace in Xcode
+npm run mobile:android  # opens android/ in Android Studio
+```
+
+After changing web code, re-run `npm run mobile:sync` (or at minimum
+`npm run build && npx cap copy ios`) so the committed iOS bundle in
+`ios/App/App/public/` stays current — Xcode Cloud builds from what's committed.
+
+iOS build/release details: see [IOS-BUILD.md](IOS-BUILD.md).
+
+## Deploy (web)
 
 `npm run build` emits a static `dist/` — drop it on any static host:
 
