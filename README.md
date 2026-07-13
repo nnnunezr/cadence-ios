@@ -55,6 +55,7 @@ After changing web code, re-run `npm run mobile:sync` (or at minimum
 `ios/App/App/public/` stays current — Xcode Cloud builds from what's committed.
 
 iOS build/release details: see [IOS-BUILD.md](IOS-BUILD.md).
+App Store submission status + steps: see [docs/APP-STORE-CHECKLIST.md](docs/APP-STORE-CHECKLIST.md).
 
 ## Deploy (web)
 
